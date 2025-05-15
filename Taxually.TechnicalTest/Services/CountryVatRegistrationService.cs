@@ -19,7 +19,6 @@ public interface ICountryVatRegistrationService
 public class GermanyRegistrationService(ITaxuallyQueueClient taxuallyQueueClient) : ICountryVatRegistrationService
 {
     public string CountryCode => CountryCodes.GERMANY;
-
     public async Task RegisterCompanyForCountry(VatRegistrationRequest request)
     {
         // Queue xml doc to be processed
