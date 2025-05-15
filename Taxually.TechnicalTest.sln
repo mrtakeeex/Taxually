@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taxually.TechnicalTest", "Taxually.TechnicalTest\Taxually.TechnicalTest.csproj", "{A119A885-BCD4-473B-861A-480AA3C87EB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taxually.Tests", "Taxually.Tests\Taxually.Tests.csproj", "{3194B483-E14C-41AC-A69F-8D224543E494}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A119A885-BCD4-473B-861A-480AA3C87EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A119A885-BCD4-473B-861A-480AA3C87EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A119A885-BCD4-473B-861A-480AA3C87EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3194B483-E14C-41AC-A69F-8D224543E494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3194B483-E14C-41AC-A69F-8D224543E494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3194B483-E14C-41AC-A69F-8D224543E494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3194B483-E14C-41AC-A69F-8D224543E494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
