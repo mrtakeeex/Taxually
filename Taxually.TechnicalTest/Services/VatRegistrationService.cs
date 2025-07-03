@@ -24,9 +24,6 @@ public class VatRegistrationService(IEnumerable<ICountryVatRegistrationService> 
         
         throw new ArgumentException($"Validation failed for Company with ID '{request.CompanyId}': Invalid country value: {request.Country}");
 
-        bool IsValidRequest()
-        {
-            return CountryCodes.Collection.Contains(request.Country?.ToUpperInvariant());
-        }
+        bool IsValidRequest() => countryVatRegistrationServices.Select(s => s.CountryCode).Contains(request.Country?.ToUpperInvariant());
     }
 }

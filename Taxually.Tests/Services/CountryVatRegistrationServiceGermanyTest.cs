@@ -13,7 +13,7 @@ public class CountryVatRegistrationServiceGermanyTest
     public CountryVatRegistrationServiceGermanyTest()
     {
         _taxuallyQueueClient = A.Fake<ITaxuallyQueueClient>();
-        _serviceUnderTest = A.Fake<GermanyRegistrationService>(x => x.WithArgumentsForConstructor(() => new(_taxuallyQueueClient)));
+        _serviceUnderTest = new GermanyRegistrationService(_taxuallyQueueClient);
     }
 
     [Fact]

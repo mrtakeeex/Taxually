@@ -1,14 +1,15 @@
+using Microsoft.Extensions.DependencyInjection;
 using Taxually.TechnicalTest;
 using Taxually.TechnicalTest.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddScoped<IVatRegistrationService, VatRegistrationService>();
+builder.Services.AddSingleton<IVatRegistrationService, VatRegistrationService>();
 
-builder.Services.AddScoped<ICountryVatRegistrationService, GermanyRegistrationService>();
-builder.Services.AddScoped<ICountryVatRegistrationService, FranceRegistrationService>();
-builder.Services.AddScoped<ICountryVatRegistrationService, GreatBritainRegistrationService>();
+builder.Services.AddSingleton<ICountryVatRegistrationService, GermanyRegistrationService>();
+builder.Services.AddSingleton<ICountryVatRegistrationService, FranceRegistrationService>();
+builder.Services.AddSingleton<ICountryVatRegistrationService, GreatBritainRegistrationService>();
 
 builder.Services.AddScoped<ITaxuallyQueueClient, TaxuallyQueueClient>();
 builder.Services.AddScoped<ITaxuallyHttpClient, TaxuallyHttpClient>();

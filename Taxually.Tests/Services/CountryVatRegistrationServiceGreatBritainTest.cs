@@ -13,7 +13,7 @@ public class CountryVatRegistrationServiceGreatBritainTest
     public CountryVatRegistrationServiceGreatBritainTest()
     {
         _taxuallyHttpClient = A.Fake<ITaxuallyHttpClient>();
-        _serviceUnderTest = A.Fake<GreatBritainRegistrationService>(x => x.WithArgumentsForConstructor(() => new(_taxuallyHttpClient)));
+        _serviceUnderTest = new GreatBritainRegistrationService(_taxuallyHttpClient);
     }
 
     [Fact]

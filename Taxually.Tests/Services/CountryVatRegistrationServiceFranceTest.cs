@@ -14,7 +14,7 @@ public class CountryVatRegistrationServiceFranceTest
     public CountryVatRegistrationServiceFranceTest()
     {
         _taxuallyQueueClient = A.Fake<ITaxuallyQueueClient>();
-        _serviceUnderTest = A.Fake<FranceRegistrationService>(x => x.WithArgumentsForConstructor(() => new(_taxuallyQueueClient)));
+        _serviceUnderTest = _serviceUnderTest = new FranceRegistrationService(_taxuallyQueueClient);
     }
 
     [Fact]

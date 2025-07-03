@@ -20,7 +20,7 @@ public class VatRegistrationServiceTest
 
         List<ICountryVatRegistrationService> services = [_germanService, _frenchService];
 
-        _serviceUnderTest = A.Fake<VatRegistrationService>(x => x.WithArgumentsForConstructor(() => new(services))); 
+        _serviceUnderTest = new VatRegistrationService(services);
     }
 
     [Fact]
